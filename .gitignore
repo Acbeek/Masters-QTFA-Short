@@ -13,6 +13,7 @@
 # Session Data files
 .RData
 .RDataTmp
+Cleansetup.Rmd
 
 # User-specific files
 .Ruserdata
