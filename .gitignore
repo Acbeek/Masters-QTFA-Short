@@ -16,6 +16,7 @@
 
 # User-specific files
 .Ruserdata
+.MasterThesisKGWQTFA.Rproj
 
 # Example code in package build process
 *-Ex.R
