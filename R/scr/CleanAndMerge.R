@@ -2,7 +2,6 @@
 #stack
 library(tidyverse)
 library(readr)
-library(lintr)
 library(docstring)
 
 
@@ -29,9 +28,9 @@ read_osseo_data <- function(file_path) {
   )
 }
 
-qtfa_nl <- read_osseo_data("../../data/raw/synthetic/Osseointegration_NIEUW_QTFA_NL_V2_export_20260107.csv")
-qtfa_uk <- read_osseo_data("../../data/raw/synthetic/Osseointegration_NIEUW_QTFA_UK_V2_export_20260107.csv")
-func_assessments <- read_osseo_data("../../data/raw/synthetic/Osseointegration_NIEUW_Functional_assessments_export_20260107.csv")
+qtfa_nl <- read_osseo_data("data/raw/synthetic/Osseointegration_NIEUW_QTFA_NL_V2_export_20260107.csv")
+qtfa_uk <- read_osseo_data("data/raw/synthetic/Osseointegration_NIEUW_QTFA_UK_V2_export_20260107.csv")
+func_assessments <- read_osseo_data("data/raw/synthetic/Osseointegration_NIEUW_Functional_assessments_export_20260107.csv")
 
 cat("Rows loaded:\n")
 cat("QTFA NL:", nrow(qtfa_nl), "\n")
@@ -73,7 +72,6 @@ count(qtfa_combined, Study_Cohort)
 count(qtfa_combined, Is_Non_User)
 
 #Visual Missingness Diagnosis
-```{r}
 missing_data_long <- qtfa_combined %>%
   select(Unique_ID, Is_Non_User, 
          starts_with("V2QTFA_PS_P"), #trouble Q
@@ -118,4 +116,3 @@ ggsave(
 
 # To find where it was saved, run this command:
 getwd()
-
