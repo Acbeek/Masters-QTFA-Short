@@ -16,6 +16,7 @@
 
 # Ignore specific files
 R/scr/Cleansetup.Rmd
+R/scr/CleanAndMerge.R
 
 # User-specific files
 .Ruserdata
